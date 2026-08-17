@@ -1,0 +1,9 @@
+name: Keep Supabase Active
+on:
+  schedule:
+    - cron: '0 8 */3 * *'
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -s "https://nhycowqfcblbnvrmyswi.supabase.co/rest/v1/students?select=id&limit=1" -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5oeWNvd3FmY2JsYm52cm15c3dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU4MTc4OTQsImV4cCI6MjEwMTM5Mzg5NH0.KOPvaNp2dDWBSRigxN82BqcgOE36BgfFGdGjgkzz06s"
